@@ -39,6 +39,7 @@ function install(_Vue){
   Vue = _Vue
   Vue.mixin({
     beforeCreate(){
+      console.log(this)
       // 只有root元素才有store，所以判断一下，this指向组件实例
       if(this.$options.store){
         Vue.prototype.$store = this.$options.store
